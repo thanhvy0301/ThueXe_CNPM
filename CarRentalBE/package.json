@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "joi": "13.1",
+    "mongoose": "^6.2.6",
+    "mongoose-auto-increment": "^5.0.1"
+  }
+}
