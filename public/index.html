@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/App.css">
+    <script src="../src/App.js"></script>
+    <script>
+         window.onload = function datePicker() {
+        document.getElementById('dateStart').valueAsDate = new Date();
+        document.getElementById('dateEnd').valueAsDate = new Date();
+    }
+    </script>
+   
+    <title>Thuê xe</title>
+</head>
+<body>
+    <div id="content">
+        <div id="menu-scrollView">
+            <ul id="ul-scrollView">
+                <li class="li-content">Vé máy bay</li>
+                <li class="li-content">Khách sạn</li>
+                <li class="li-content">Combo tiết kiệm</li>
+                <li class="li-content">Đưa đón sân bay</li>
+                <li class="li-content">Xperience</li>
+                <li class="li-content">Cho thuê xe</li>
+                <li class="li-content">JR Pass</li>
+                <li class="li-content">Điểm thưởng của tôi</li>
+                <li class="li-content">Tình trạng chuyến bay</li>
+                <li class="li-content">Thông báo giá vé</li>                
+            </ul>
+        </div>
+        <div id="form-search">   
+            <div class="div-search-child" style="margin-top:0px; padding-top: 20px;" id="option-choThue" ><label >Cho thuê xe</label><br/>
+                <select name="option" id="option">
+                    <option value="tuLai"> Tự lái</option>
+                    <option value="cotaiXe"> Có tài xế</option>
+                </select><br /></div>         
+            <div class="div-search-child"><label >Địa điểm thuê xe của bạn</label><br />
+                <input type="text" placeholder="Điền thành phố, sân bay, hoặc khách sạn" id="address" required/>
+                <br /></div>
+            <div class="div-search-child">
+                <label>Ngày bắt đầu </label>
+                <input type="date" class="input-date-time" style="margin-left: 5px;" id="dateStart">
+                <label style="padding-left: 10px;">Giờ bắt đầu</label>
+                <input type="time" class="input-time" style="margin-left: 4px;" ><br />
+            </div>
+            <div class="div-search-child">
+                <label >Ngày kết thúc</label>
+                <input type="date" class="input-date-time" style="margin-left: 5px;" id="dateEnd" onload="dateEnd()">
+                <label style="padding-left: 10px;">Giờ kết thúc</label>
+                <input type="time"class="input-time"/>
+                <button  type="submit" id="btn-search" >Tìm xe</button>    
+            </div>  
+                               
+        </div>
+    </div>
+</body>
+</html>
