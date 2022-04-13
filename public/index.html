@@ -10,6 +10,7 @@
         window.onload = function datePicker() {
             const dS = document.getElementById('dateStart').valueAsDate = new Date();                
             const dE  = document.getElementById('dateEnd').valueAsDate = new Date();
+            dE.setDate = (dE.getDate()+1);
     }
     </script>
    
