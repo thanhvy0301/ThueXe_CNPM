@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../fontawesome-free-6.1.1-web/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <!-- <script src="../src/ThueXETL.js"></script> -->
     <link rel="stylesheet" href="../src/ThueXeTL.css">
-    <title>Thuê xe tự lái</title>   
+    <title>Thuê xe tự lái</title>      
 </head>
-<body>
-   
+<body>         
+    <div id="root"></div>
+    <script type="module" src="/src/ThueXETL.js"></script>
     <div id="contents">
         <div id="nav-head">
             <p style="padding-left: 10px; font-size: 0.8em;color: rgb(133, 133, 133); ">Thuê xe / Thuê xe tự lái</p>
@@ -22,68 +24,71 @@
         </div>
         <div id="content">
             <div id="filter-left">
-                <div id="label-filter" style="display: flex; align-items: center; margin-left: 20px;">
-                    <p style="width: 70%; font-weight: 600;">BỘ LỌC</p>
-                    <button type="reset" onclick=""id="btn-reset-filter">Cài lại</button>
-                </div>
-                <div id="SoXe-btn" onclick="myFunction()" class="dropbtn">
-                    <p style="width: 180px; padding-right: 10px; font-weight: bold;">Số xe</p>
-                    <i class="fa-solid fa-angle-up" style="padding-top:20px; "></i>
-                </div>
-                <div id="Filter-item" class="dropdown-content">
-                    <label class="container">Tất cả
-                        <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container">Tự dộng
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container">Số sàn
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                      </label>                      
-                </div>
-                <div id="SoXe-btn" onclick="myFunction()" class="dropbtn">
-                    <p style="width: 180px; padding-right: 10px; font-weight: bold;">Số hành khách tối đa</p>
-                    <i class="fa-solid fa-angle-up" style="padding-top:20px; "></i>
-                </div>
-                <div id="Filter-item" class="dropdown-content">
-                    <label class="container">Tất cả
-                        <input type="radio" checked="checked" name="radio-2">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container">4 hành khách
-                        <input type="radio" name="radio-2">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container">5 - 6 hành khách
-                        <input type="radio" name="radio-2">
-                        <span class="checkmark"></span>
-                      </label> 
-                      <label class="container"> >> 6 hành khách
-                        <input type="radio" name="radio-2">
-                        <span class="checkmark"></span>
-                      </label>                      
-                </div>
-                <div id="SoXe-btn" onclick="myFunction()" class="dropbtn">
-                    <p style="width: 180px; padding-right: 10px; font-weight: bold;">Khoảng giá mỗi ngày thuê</p>
-                    <i class="fa-solid fa-angle-up" style="padding-top:20px; "></i>
-                </div>
-                <div style="display: flex; align-items: center; justify-content: space-evenly;">
-                    <div class="price">
-                        <div style="display: flex; justify-content: space-evenly; margin-top: 4px; ">
-                            <label class="vnd">VND</label>
-                            <input type="text" class="ip-price"min="0" max="1016000" step="1" value="0"pattern="{1,15}"/>
-                        </div>
+                <form>
+                    <div id="label-filter" style="display: flex; align-items: center; margin-left: 20px;">
+                        <p style="width: 70%; font-weight: 600;">BỘ LỌC</p>
+                        <button type="reset" onclick="resetBtn()"id="btn-reset-filter">Cài lại</button>
                     </div>
-                    <div class="price">
-                        <div style="display: flex; justify-content: space-evenly; margin-top: 4px;">
-                            <label class="vnd">VND</label>
-                            <input type="text" class="ip-price" min="0" max="1016000" step="1" value="1016000"pattern="{1,15}"/>
-                        </div>
+                    <div id="SoXe-btn" onclick="myFunction()" class="dropbtn">
+                        <p style="width: 180px; padding-right: 10px; font-weight: bold;">Số xe</p>
+                        <i class="fa-solid fa-angle-up" style="padding-top:20px; "></i>
                     </div>
-                </div>
+                    <div id="Filter-item" class="dropdown-content">                   
+                            <label class="container" >Tất cả
+                                <input type="radio" checked="checked" name="radio" />
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="container">Tự dộng
+                                <input type="radio" name="radio" />
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="container">Số sàn
+                                <input type="radio" name="radio" />
+                                <span class="checkmark"></span>
+                              </label>                                 
+                    </div>
+                    <div id="SoXe-btn" onclick="myFunction()" class="dropbtn">
+                        <p style="width: 180px; padding-right: 10px; font-weight: bold;">Số hành khách tối đa</p>
+                        <i class="fa-solid fa-angle-up" style="padding-top:20px; "></i>
+                    </div>
+                    <div id="Filter-item" class="dropdown-content">
+                        <label class="container">Tất cả
+                            <input type="radio" checked="checked" name="radio-2" >
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="container">4 hành khách
+                            <input type="radio" name="radio-2" >
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="container">5 - 6 hành khách
+                            <input type="radio" name="radio-2" >
+                            <span class="checkmark"></span>
+                          </label> 
+                          <label class="container"> >> 6 hành khách
+                            <input type="radio" name="radio-2" >
+                            <span class="checkmark"></span>
+                          </label>                      
+                    </div>
+                    <div id="SoXe-btn" onclick="myFunction()" class="dropbtn">
+                        <p style="width: 180px; padding-right: 10px; font-weight: bold;">Khoảng giá mỗi ngày thuê</p>
+                        <i class="fa-solid fa-angle-up" style="padding-top:20px; "></i>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: space-evenly;">
+                        <div class="price">
+                            <div style="display: flex; justify-content: space-evenly; margin-top: 4px; ">
+                                <label class="vnd">VND</label>
+                                <input type="text" class="ip-price"min="0" max="1016000" step="1" value="0"pattern="{1,15}"/>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div style="display: flex; justify-content: space-evenly; margin-top: 4px;">
+                                <label class="vnd">VND</label>
+                                <input type="text" class="ip-price" min="0" max="1016000" step="1" value="1016000"pattern="{1,15}"/>
+                            </div>
+                        </div>
+                    </div>                    
+                </form>
+               
                 
             </div>                      
             <div id="content-right">
@@ -93,9 +98,6 @@
                 </div>
             </div>
         </div>
-    </div>
-   
-    <div id="root"></div>
 <!-- <script>
     function myFunction() {  
     document.getElementById("myDropdown").classList.toggle("hidden");

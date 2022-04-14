@@ -1,10 +1,4 @@
-
-import React from 'react';
-function App() {
-  return(
-    <div>
-        <h4>Thuê xe / Thuê xe tự lái</h4>
-    </div>
-  )
+import jquery from "jquery";
+function changeURL() {
+    location.replace("../public/ThueXeTL.html");
 }
-export default App;
