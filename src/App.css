@@ -4,6 +4,7 @@
   --width-time:100px;
   --padding-top:10px;
   --background-color-content:rgb(248, 248, 248);
+  --background-color-btn:rgb(255, 128, 0);
 }
 *{
   margin: 0px;
@@ -74,6 +75,10 @@ input,select, option{
   border-radius: 10px;
   color: white;
   border: none;
+  cursor: pointer;
+}
+#btn-search:hover{
+  background-color: var(--background-color-btn);
 }
 .div-search-child{
   margin-top: 20px;
@@ -85,7 +90,7 @@ input,select, option{
   padding: 5px 10px 10px 10px;
 }
 .li-content:hover{
-  background-color: rgb(255, 255, 255);
+  background-color:var(--background-color-content);
 }
 .input-date-time{
   width: var(--width-date-time);
