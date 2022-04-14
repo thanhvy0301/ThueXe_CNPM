@@ -1,17 +1,14 @@
-import React from 'react'
-import './ThueXeTL.css';
-function App(){
-    return(
-        <div className='TX'>
-            <nav>
-                <ul>
-                    <li>
-                        <a href='/'>Home</a>
-                    </li>
-                </ul>
-            </nav>
-            <index/>
-        </div>
-    )
-}
-export default App; 
+function myFunction() {
+  
+    document.getElementById("myDropdown").classList.toggle("hidden");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (event.target.matches('.dropbtn')) {
+      document.getElementById("myDropdown").classList.toggle("show");
+    if(event.target.matches('.dropbtn')){
+       document.getElementById("myDropdown").classList.toggle("hidden");
+     }
+    }
+  }
