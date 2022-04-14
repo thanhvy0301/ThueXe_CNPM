@@ -1,6 +1,6 @@
 import React from 'react'
-
-function ThueXeTL(){
+import './ThueXeTL.css';
+function App(){
     return(
         <div className='TX'>
             <nav>
@@ -14,3 +14,4 @@ function ThueXeTL(){
         </div>
     )
 }
+export default App; 

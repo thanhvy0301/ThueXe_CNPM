@@ -33,6 +33,29 @@ body{
     background-color: rgb(238, 238, 238);
     cursor: pointer;
 }
+#contents{
+    width: 100%;
+    margin-right: 0px;    
+}
 #content{
-    display: flexbox;
+    display: flex;   
+    width: fit-content;    
+    margin: 10px 0px 0px 300px;    
+    border-radius: var(--border-radius);
+}
+#content-right{
+    width: 710px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: var(--border-radius);
+}
+#filter-left{
+    width: 280px;
+    border-radius: var(--border-radius);
+    background-color: white;
+    /* margin-left: 300px;     */
+}
+#btn-reset-filter{
+    height: fit-content;
+    
 }
