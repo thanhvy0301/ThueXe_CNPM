@@ -9,7 +9,7 @@ body{
     width: 100%;    
     margin: 0px;
     height: 1500px;
-    background-color: rgb(231, 231, 231);
+    background-color: #e6eaed!important;
     font-family: Arial, Helvetica, sans-serif;
 }
 label{
@@ -94,7 +94,13 @@ label{
     /* margin-left: 300px;     */
 }
 #btn-reset-filter{
-    height: fit-content;    
+    height: fit-content; 
+    background-color: white;   
+    border: none;
+    color: #2196F3;
+    font-weight: 600;
+    font-size: 0.9em;
+    cursor: pointer;
 }
 #SoXe-btn{
     display: flex; 
@@ -220,6 +226,9 @@ label{
   color: white;
   border: none;
 }
+#btn-search:hover{
+  background-color: rgba(255, 68, 0, 0.843)
+}
 #short-item{
   margin-top: 50px;
   border-radius: var(--border-radius);
@@ -227,4 +236,14 @@ label{
   justify-content: space-around;
   flex-direction: column;
   background-color: white;
+}
+.name-car-detail{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+i{
+  color: #2196F3;
+}
+span{
+  color: rgb(104, 113, 118);
 }

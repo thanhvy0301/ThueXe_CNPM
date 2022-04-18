@@ -67,10 +67,10 @@ input,select, option{
   margin-top: 3px;
 }
 #btn-search{
-  width: 150px;
+  width: 200px;
   height: 40px;
   font-size: 1.1em;
-  margin-left: 100px;
+  margin-left: 70px;
   background-color: orangered;
   border-radius: 10px;
   color: white;

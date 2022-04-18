@@ -88,6 +88,9 @@ input,select, option{
   color: white;
   border: none;
 }
+#btn-search{
+  background-color: rgba(255, 68, 0, 0.843)
+}
 .div-search-child{
   margin-top: 20px;
 }
