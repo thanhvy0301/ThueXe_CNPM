@@ -23,12 +23,23 @@
 //     }
 //  })
 // }'
-let dropdownBtn = document.querySelector('.menu-btn');
-  let menuContent = document.querySelector('.menu-content');
-  dropdownBtn.addEventListener('click',()=>{
-    if(menuContent.style.display===""){
-        menuContent.style.display="block";
-    } else {
-        menuContent.style.display="";
-    }
-  })
+// function dropDown() {
+//   let dropdownBtn = document.getElementsByClassName('menu-btn');
+//   let menuContent = document.getElementsByClassName('menu-content');
+//   let content = document.getElementById('content');
+//   let nav = document.getElementById('nav-head')
+//   dropdownBtn.addEventListener('click',()=>{
+//   if(menuContent.style.display=== ""){
+//       menuContent.style.display="block";
+//       content.style.marginTop = "250px";
+//       menuContent.style.borderBottomLeftRadius = "10px";
+//       menuContent.style.borderBottomRightRadius = "10px";           
+      
+//   } else {
+//       menuContent.style.display= "";
+//       content.style.marginTop = "20px";
+//       nav.style.borderBottomLeftRadius = "10px";
+//       nav.style.borderBottomRightRadius = "10px";
+//   }
+//   })
+// }

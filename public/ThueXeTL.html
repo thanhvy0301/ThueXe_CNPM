@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../fontawesome-free-6.1.1-web/css/all.min.css">
     <!-- <script src="../src/ThueXETL.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> 
     <link rel="stylesheet" href="../src/ThueXeTL.css">    
     <title>Thuê xe tự lái</title>   
 </head>
@@ -17,35 +18,35 @@
                 <h3 style="width: 800px; margin-bottom: 0px; padding-left: 10px;">Thuê xe tự lái</h3>
                 <div style="display: flex; align-items: center; ">
                     <p style="margin: 0px;color: rgb(133, 133, 133); width: 700px; padding-left: 10px;">NHA TRANG - T3, 19 Thg 04 2022 09:00 - T6, 22 Thg 04 2022 09:00</p>  
-                    <button id="change-search-btn" class="menu-btn" >Thay đổi tìm kiếm</button>      
-                </div>
+                    <button id="change-search-btn" class="menu-btn" onclick="dropDown()">Thay đổi tìm kiếm</button>      
+                </div>  
                 
                 <div style="width: 1000px;">                   
-                    <div class="menu-content">
+                    <div class="menu-content" style="border-radius:0px" >
                         <div class="div-search-child" style="padding-top: 10px;"><label style="margin-top: 10px; ">Địa điểm thuê xe của bạn</label><br />
                             <input type="text" placeholder="Điền thành phố, sân bay, hoặc khách sạn" id="address" required style="width: 400px; margin-top: 10px;"/>
                             <br /></div>
                             <div id="labels-time">
-                                <label id="label-time">Ngày bắt đầu </label>
-                                <label style="padding-left: 10px;" id="label-time">Giờ bắt đầu</label>
-                                <label id="label-time">Ngày kết thúc</label>
+                                <label id="label-time" style="width: 150px;">Ngày bắt đầu </label>
+                                <label style="padding-left: 10px; width: 140px;" id="label-time">Giờ bắt đầu</label>
+                                <label id="label-time" style="width: 150px;">Ngày kết thúc</label>
                                 <label style="padding-left: 10px;" id="label-time">Giờ kết thúc</label>
                             </div>
-                            <!-- <div style="display: flex;">
+                            <div style="display: flex; justify-content: flex-start; ">
                                 <div class="div-search-child">
                                    
-                                    <input type="date" class="input-date-time" style="margin-left: 5px;" id="dateStart">
+                                    <input type="date" class="input-date-time"  id="dateStart" style="width: 200px;">
                                    
-                                    <input type="time" class="input-time" style="margin-left: 4px;" id="timeStart"><br />
+                                    <input type="time" class="input-time" style="margin-left: 10px;" id="timeStart"><br />
                                 </div>
-                                <div class="div-search-child">
+                                <div class="div-search-child" style="margin-top: 6px;">
                                     
-                                    <input type="date"  class="input-date-time" style="margin-left: 5px;" id="dateEnd" >
+                                    <input type="date"  class="input-date-time" style="margin-left: 10px;width: 200px" id="dateEnd" >
                                     
-                                    <input type="time"class="input-time" id="timeEnd"/>
-                                    <button type="submit" id="btn-search" ><a href="../public/ThueXeTL.html" style="text-decoration: none;">Tìm xe</a></button>    
+                                    <input type="time"class="input-time" id="timeEnd" style="margin-left: 10px;"/>
+                                    <button type="submit" id="btn-search" ><a href="../public/ThueXeTL.html" style="text-decoration: none; color: white;">Tìm xe</a></button>    
                                 </div>          
-                            </div>                          -->
+                            </div>                         
                     </div>
                 </div>                
             </div>        
@@ -111,13 +112,37 @@
                         </div>
                         <div class="price">
                             <div style="display: flex; justify-content: space-evenly; margin-top: 4px;">
-                                <label class="vnd">VND</label>
-                                <input type="text" class="ip-price" min="0" max="1016000" step="1" value="1016000"pattern="{1,15}"/>
+                                <label class="vnd" style="width: fit-content;padding-right: 5px; " >VND</label>
+                                <!-- <input type="text" class="ip-price" min="0" max="1016000" step="1" value="1016000" pattern="{1,15}"/> -->
+                                <p style="margin: 0px; width: 70px;"><span id="demo" style="font-size: 12px;"></span></p>
                             </div>
                         </div>
                     </div>
-                    
-                </div>                      
+                    <input type="range" style="width: 200px; margin-left: 25px;"min="0" max="1060000" value="50" id="myRange"/>
+                    <div id="short-item" class="dropdown-content" >
+                        <p style="width: 180px; padding-right: 10px; font-weight: bold; padding-left: 15px; ">Sắp xếp</p>
+                        <div style="width: fit-content; margin-left: 20px; margin-top: 20px;">
+                            <label class="container">Tất cả
+                                <input type="radio" checked="checked" name="radio-2">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="container">4 hành khách
+                                <input type="radio" name="radio-2">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="container">5 - 6 hành khách
+                                <input type="radio" name="radio-2">
+                                <span class="checkmark"></span>
+                              </label> 
+                              <label class="container"> >> 6 hành khách
+                                <input type="radio" name="radio-2">
+                                <span class="checkmark"></span>
+                              </label>     
+                        </div>
+                                         
+                    </div>
+                </div>          
+               
                 <div id="content-right">
                     <div id="detail-carRental" style="display: flex; ">
                         <p style="width: 50px;">Số xe</p>
@@ -131,16 +156,32 @@
     <script>
         let dropdownBtn = document.querySelector('.menu-btn');
         let menuContent = document.querySelector('.menu-content');
+        let content = document.querySelector('#content');
+        let nav = document.querySelector('#nav-head')
         dropdownBtn.addEventListener('click',()=>{
-        if(menuContent.style.display===""){
+        if(menuContent.style.display=== ""){
             menuContent.style.display="block";
+            content.style.marginTop = "250px";
+            menuContent.style.borderBottomLeftRadius = "10px";
+            menuContent.style.borderBottomRightRadius = "10px";           
+            
         } else {
-            menuContent.style.display="";
+            menuContent.style.display= "";
+            content.style.marginTop = "20px";
+            nav.style.borderBottomLeftRadius = "10px";
+            nav.style.borderBottomRightRadius = "10px";
         }
         })
         window.onload = function datePicker() {
             const dS = document.getElementById('dateStart').valueAsDate = new Date();                      
             const dE  = document.getElementById('dateEnd').valueAsDate = new Date();                                                                
+        }
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+        output.innerHTML = this.value;
         }
     </script>
 </body>
