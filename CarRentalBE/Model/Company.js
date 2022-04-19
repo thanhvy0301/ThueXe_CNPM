@@ -1,30 +1,32 @@
 const mongoose = require('mongoose');
 const Joi = require('joi');
-const autoIncrement = require('mongoose-auto-increment');
-const {locationSchema} = require('../Model/Location');
-
-var connection = mongoose.createConnection('mongodb://localhost/rental');
-autoIncrement.initialize(connection);
+const { min, max } = require('joi/lib/types/array');
 
 const companySchema = new mongoose.Schema({
-    locationId: {
-        type: locationSchema,
+    Country:{
+        type: String,
         required: true
     },
-    CompanyRent: {
+    City:{
+        type: String,
+        required: true
+    },
+    Street:{
+        type: String,
+        required: true
+    },
+    CompanyName:{
         type: String,
         required: true
     }
 });
 
-companySchema.plugin(autoIncrement.plugin, 'locationId');
-const Company = mongoose.model('Company', companySchema);
-var company = connection.model('company', companySchema);
-
 function validateCompany(company){
     const schema = {
-        LocationId: Joi.string().required(),
-        CompanyRent: Joi.string().min(3).max(50).required()
+        Country: Joi.string().required().min(5).max(max),
+        City: Joi.string().required().min(50).max(max),
+        Street: Joi.string().required().min(50).max(max, 'utf8'),
+        CompanyName: Joi.string.required().min(50).max(max)
     };
     return result = Joi.validate(company, schema);
 }
