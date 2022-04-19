@@ -30,7 +30,7 @@ const carSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     }
-})
+});
 
 function validateCar(car){
     const schema = {

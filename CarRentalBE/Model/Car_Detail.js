@@ -23,7 +23,7 @@ const Car_Detail_Schema = new mongoose.Schema({
         type: companySchema,
         required: true,
     }
-})
+});
 
 function validateDetail(Car_Detail){
     const schema = {
