@@ -1,0 +1,131 @@
+:root{
+    --background-label:rgb(242, 243, 243);
+    --color-text:rgb(104, 113, 118);
+}
+body{
+    font-family: MuseoSans, -apple-system, BlinkMacSystemFont, "Segoe UI", 
+    Roboto, Helvetica, Arial, sans-serif, 
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+#short-item{
+    box-shadow: 0px 10px 10px 2px rgb(219, 219, 219);
+    margin-left: 20%;
+    margin-top: 50px;
+    border-radius: var(--border-radius);
+    /* justify-content: space-around;
+    flex-direction: column; */
+    background-color: white;
+
+}
+.ul-label{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 0px;
+}
+.block-item{
+    width: 150px;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: var(--border-radius);
+    background-color: white;
+}
+.content-car{
+    margin-top: 0px;
+    text-align: center;
+    color: rgb(104, 113, 118);
+}
+.name-car{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.detail-info-partner-left{
+    padding-left: 10px;
+    width: 50%;
+}
+.spans-rate{
+    font-size: 0.9em;
+    color: var(--color-text);
+}
+.detail-info-partner{
+    display:flex; 
+    margin:-150px 0px 0px 530px;
+    background-color:white;
+    border-radius: var(--border-radius);
+    height: auto;
+    box-shadow: 0px 10px 10px 2px rgb(219, 219, 219);
+
+}
+.detail-info-partner-right{
+    width: 250px;
+    height: fit-content;
+    padding-right: 10px;
+    margin-top: 20px;
+}
+#btn-search{
+    height: 30px;
+}
+.img-nameCar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#div-SummaryCarRen{
+    margin-top: -330px;
+    margin-left: 20px;
+    height: 200px;
+    width: 220px;
+    background-color:white;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 10px 10px 2px rgb(219, 219, 219);
+}
+#cate-engine{
+    border:1px solid black;
+    width:60px;
+    text-align:center;
+    font-size:12px;
+    height:18px;
+    padding-top:2.5px; 
+    border-radius:20px;
+    margin-top: 0px;
+}
+#Ul-Tags{
+    list-style-type: none;
+    font-size: 12px;
+    padding-left: 0px;
+}
+#li-tags{
+    border-radius: 20px;
+    line-height: 30px;
+    text-align: center;
+    width: 120px;
+    margin-top: 10px;
+    background-color: var(--background-label);
+    color: var(--color-text);
+}
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper{
+    max-width: 600px;
+    min-height: 200px;
+    width: 320px;
+}
+.css-ypiqx9-MuiDialogContent-root{
+    border: 1px solid rgb(172, 172, 172);
+    width: 240px;
+    margin-left: 24px;
+    border-radius: 5px;
+}
+.css-bdhsul-MuiTypography-root-MuiDialogTitle-root{
+    font-weight: bold;
+}
+#alert-dialog-slide-description{
+    color: black;
+}
+/* .css-1rwt2y5-MuiButtonBase-root-MuiButton-root{
+    height: 15px;
+    min-width: 20px;
+    
+} */
+.css-1rwt2y5-MuiButtonBase-root-MuiButton-root{
+    min-width: 0px;
+}

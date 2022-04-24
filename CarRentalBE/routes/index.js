@@ -5,10 +5,44 @@ const uri = "mongodb+srv://Tandiep:w7kEEceQ41B9zE4z@mongodb-carrental.f1yco.mong
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render();
+  res.render('index', { title: 'Express' });
 });
-/* Phần địa chỉ và trang cho khách hàng */
+//Get Drivers list
+router.get('/getDrivers', function(req, res, next) {
+  MongoClient.connect(uri, function(err, db){
+    if (err) throw err;
+    var dbo = db.db("CarRentalDatabase");
+    dbo.collection("drivers").find({}, function(err, result) {
+      if (err) throw err;
+      db.close();
+    });
+  });
+  res.send();
+});
 
-/* Kết thúc phần địa chỉ và trang cho khách hàng */
+//Get InsertDriver
+router.get('/insrtDrivers', function(req,res,next){
+  res.render('index',{title:'express'});
+})
+
+//Post Drivers
+router.post('/insertDrivers', async(req,res)=>{
+  MongoClient.connect(uri,function(err,db){
+    if (err) throw err;
+    var dbo = db.db("CarRentalDatabase");
+    var driver = {
+      DriverName: req.body.DriverName,
+      DriverAge: req.body.DriverAge,
+      DriverPhone: req.body.DriverPhone
+    };
+    dbo.collection("drivers").insertOne(driver, function(err, res) {
+    if (err) throw err;
+    console.log("1 document inserted");
+    db.close();
+    });
+  });
+  res.send();
+})
+
 
 module.exports = router;

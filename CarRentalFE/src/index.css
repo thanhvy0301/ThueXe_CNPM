@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+    background-color: rgba(218, 218, 218, 0.87);
 }
 
 code {
@@ -13,19 +14,15 @@ code {
 }
 :root{
   --width-input:300px;
-  --width-date-time:125px;
-  --width-time:100px;
+  --width-date-time:180px;
+  --width-time:90px;
   --padding-top:10px;
   --background-color-content:rgb(248, 248, 248);
 }
 *{
-  margin: 0px;
-  width: 100%;
+  /* margin: 0px; */
   height: auto;
   font-family: Arial, Helvetica, sans-serif;
-}
-body{
-  background-color: rgba(44, 44, 44, 0.87);
 }
 form{
   height: 1000px;
@@ -38,6 +35,7 @@ input,select, option{
   height: 35px;
   border-radius: 5px;
   border: solid gainsboro 0.5px;
+  outline-style: none;
 }
 ::placeholder{
   padding-left: 10px;
@@ -45,7 +43,7 @@ input,select, option{
 #content{
   display: flex;
   width: auto;    
-  margin: 250px;
+  margin: 200px;
   font-family: Arial, Helvetica, sans-serif;       
   background-color: rgb(255, 255, 255);
   height: 280px;
@@ -53,7 +51,7 @@ input,select, option{
 }
 #form-search{
   width: 1000px;
-  margin-left: 10px;
+  margin-left: 20px;
   height: fit-content;
   background-color: rgb(255, 255, 255);    
 }
@@ -78,16 +76,15 @@ input,select, option{
   width: var(--width-input);
   margin-top: 3px;
 }
-#btn-search{
-  width: 150px;
+/* #btn-search{
+  width: 180px;
   height: 40px;
   font-size: 1.1em;
-  margin-left: 100px;
   background-color: orangered;
-  border-radius: 10px;
+  border-radius: 5px;
   color: white;
   border: none;
-}
+} */
 .div-search-child{
   margin-top: 20px;
 }
@@ -102,7 +99,19 @@ input,select, option{
 }
 .input-date-time{
   width: var(--width-date-time);
+  margin-top: 5px;
+  
 }
 .input-time{
   width: var(--width-time);
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+#ul-scrollView{
+  overflow: auto;
+  height: 230px;
+  width: 250px;
+  list-style-type: none;
+  padding-left: 0px;
 }

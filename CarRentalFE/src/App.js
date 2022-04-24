@@ -1,46 +1,20 @@
-// import {useState} from 'react';
-// import "./App.css";
-// import React from 'react';
-// const gift = [
-//   'CPU i9',
-//   'RAM 16 RGB',
-//   'RGB keyboard'
-// ]
-// function App() {
-//   return(
-//     <div>
-//       <h2>Chưa có phần thưởng</h2>
-//       <button>Get</button>
-//     </div>
-//   )
-// }
-// export default App;
-
-class Toggle extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {isToggleOn: true};
-  
-      // Phép "ràng buộc" (bind) này là cần thiết để `this` hoạt động trong callback
-      this.handleClick = this.handleClick.bind(this);
-    }
-  
-    handleClick() {
-      this.setState(prevState => ({
-        isToggleOn: !prevState.isToggleOn
-      }));
-    }
-  
-    render() {
-      return (
-        <button onClick={this.handleClick}>
-          {this.state.isToggleOn ? 'ON' : 'OFF'}
-        </button>
-      );
-    }
-  }
-  
-  ReactDOM.render(
-    <Toggle />,
-    document.getElementById('root')
-  );
+import React from "react";
+import { ReactDOM } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route, Link, Switch } from "react-router-dom";
+import Categories from "./page/CategoryCarRental/CatagoriesCarRen";
+import Contact from "./page/Contact";
+import Home from "./page/Home/Home";
+import DetailCar from "./page/DetailCar/DetailCar";
+function App() {
+    return(
+        <div className="app">
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/Categories" element={<Categories/>}/>
+                <Route path="/DetailCar" element={<DetailCar/>}/>
+            </Routes>          
+        </div>
+    )
+}
+export default App;

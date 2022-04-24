@@ -1,0 +1,249 @@
+:root{
+  --color-brand:rgb(1, 148, 243);
+  --border-radius: 10px;
+  --width-input:300px;
+  --width-date-time:125px;
+  --width-time:100px;
+}
+body{
+  width: 100%;    
+  margin: 0px;
+  height: 1500px;
+  background-color: #e6eaed!important;
+  font-family: Arial, Helvetica, sans-serif;
+}
+label{
+  font-weight:550;
+  font-size: 0.9em;
+  color: rgb(64, 64, 64);
+}
+input,select, option{
+  height: 35px;
+  border-radius: 5px;
+  border: solid gainsboro 0.5px;
+}
+::placeholder{
+  padding-left: 10px;
+}
+.div-search-child{
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.li-content{
+  height: 28px;    
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5px 10px 10px 10px;
+}
+.li-content:hover{
+  background-color:var(--background-color-content);
+}
+.input-date-time{
+  width: var(--width-date-time);
+}
+.input-time{
+  width: var(--width-time);
+}
+#nav-head{
+  width: 1000px;
+  height: 140px;
+  box-sizing: border-box;   
+  border: 1px solid white; 
+  margin: 50px 200px 0px 300px; 
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 0px 10px 10px 2px rgb(219, 219, 219);
+}
+#change-search-btn{
+  border: 0px;
+  height: 40px;
+  border-radius: var(--border-radius);
+  width: 160px;
+  font-size: 1em ;
+  font-weight: bold;
+  color: var(--color-brand);    
+  background-color: rgb(247, 249, 250);    
+  margin-left: 100px;
+}
+#change-search-btn:hover{
+  background-color: rgb(238, 238, 238);
+  cursor: pointer;
+}
+#contents{
+  width: 100%;
+  margin-right: 0px;    
+}
+#content{
+  display: flex;   
+  width: fit-content;    
+  margin: 10px 0px 0px 300px;    
+  border-radius: var(--border-radius);
+}
+#content-right{
+  width: 740px;
+  margin-left: 10px;
+  background-color: white;
+  border-radius: var(--border-radius);
+}
+#filter-left{
+  width: 250px;
+  height: 750px;
+  border-radius: var(--border-radius);
+  background-color: white;
+  /* margin-left: 300px;     */
+}
+#btn-reset-filter{
+  height: fit-content; 
+  background-color: white;   
+  border: none;
+  color: #2196F3;
+  font-weight: 600;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+#SoXe-btn{
+  display: flex; 
+  justify-content: space-around;
+  border-bottom: 0.5px solid rgb(240, 240, 240);
+  position: relative; 
+}
+#Filter-item{
+  width: fit-content;
+  margin-left: 20px;
+  margin-top: 20px;
+  /* display: none; */    
+  /* overflow: auto;       */
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;   
+  height: 40px; 
+  font-weight: 500;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border-radius: 50%;
+  
+}
+
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius:  50% ;
+  background: #ffffff;
+}
+.price{
+  margin-top: 20px;
+  border: 1px solid rgb(216, 216, 216);
+  width: 110px;
+  height: 30px;
+  border-radius: var(--border-radius);
+}
+.ip-price{
+  width: 60px;
+  height: fit-content;
+  border: none;
+  background-color: white;
+  padding-top: 4px; 
+  outline: none;
+}
+.vnd{
+  /* padding-top: 10px;  */
+  font-size: 10px;
+  padding-top: 6px;     
+}
+.menu-content{
+ display:none;
+ position:relative;
+ background-color:white;
+ min-width: 200px;
+ z-index: 1;
+ margin-top:20px;
+ height: 220px;
+ border: 1px solid white; 
+ box-shadow: 0px 10px 10px 2px rgb(219, 219, 219);
+}
+#labels-time{
+  display: flex;
+  margin: 30px 0px 0px 10px;
+}
+#label-time{
+padding-left: 5px;
+}
+#btn-search{
+width: 200px;
+height: 40px;
+font-size: 1.1em;
+margin-left: 50px;
+background-color: orangered;
+border-radius: 5px;
+color: white;
+border: none;
+}
+#btn-search:hover{
+background-color: rgba(255, 68, 0, 0.843)
+}
+#short-item{
+margin-top: 50px;
+border-radius: var(--border-radius);
+display: flex; 
+justify-content: space-around;
+flex-direction: column;
+background-color: white;
+}
+.name-car-detail{
+font-weight: bold;
+font-size: 1.2em;
+}
+i{
+color: #2196F3;
+}
+span{
+color: rgb(104, 113, 118);
+}
