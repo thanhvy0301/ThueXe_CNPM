@@ -3,13 +3,13 @@ const { MongoClient } = require('mongodb');
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+/*router.get('/', function(req, res, next) {
   res.send('respond with a resource');
-});
+});*/
 
 // Các địa chỉ và trang cho khách hàng
 //Get danh sách xe
-router.get('/Car',function(req,res,next){
+/*router.get('/Car',function(req,res,next){
   MongoClient.connect(uri, function(err,db){
     if (err) throw err;
     var dbo = db.db("CarRentalDatabase");
@@ -19,7 +19,7 @@ router.get('/Car',function(req,res,next){
       db.close();
     });
   });
-});
+});*/
 
 //
 
